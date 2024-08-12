@@ -9,7 +9,8 @@ import com.ammw.ecommercemobileapp.domain.model.ProductModel
 fun List<CategoryResponse>.toCModel(): List<BrandModel> {
     return this.map { categoryResponse ->
         BrandModel(
-            id = categoryResponse.id.toInt(),  // Using the index as the ID
+            id = categoryResponse.id.toInt(),
+            name = categoryResponse.name.orEmpty(),
             imageUrl = categoryResponse.iconUrl.orEmpty()
         )
     }
@@ -20,6 +21,7 @@ fun List<ProductResponse>.toPModel(): List<PopularItemModel> {
         PopularItemModel(
             id = index,
             name = response.name,
+            categoryName = response.categoryName,
             imageUrl= if (!response.iconUrl.isNullOrEmpty()) {
                 response.iconUrl!![index]
             }else {

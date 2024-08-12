@@ -68,29 +68,29 @@
 
             <ImageView
                 android:id="@+id/ivMenuHome"
-                android:layout_width="@dimen/nav_icon_size"
-                android:layout_height="@dimen/nav_icon_size"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:src="@drawable/home"
                 android:layout_weight="1"/>
 
             <ImageView
                 android:id="@+id/ivMenuCart"
-                android:layout_width="@dimen/nav_icon_size"
-                android:layout_height="@dimen/nav_icon_size"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:src="@drawable/shopping_bag"
                 android:layout_weight="1"/>
 
             <ImageView
                 android:id="@+id/ivMenuBookmark"
-                android:layout_width="@dimen/nav_icon_size"
-                android:layout_height="@dimen/nav_icon_size"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:src="@drawable/bookmark"
                 android:layout_weight="1" />
 
             <ImageView
                 android:id="@+id/ivMenuSearch"
-                android:layout_width="@dimen/nav_icon_size"
-                android:layout_height="@dimen/nav_icon_size"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:src="@drawable/search"
                 android:layout_weight="1"/>
 

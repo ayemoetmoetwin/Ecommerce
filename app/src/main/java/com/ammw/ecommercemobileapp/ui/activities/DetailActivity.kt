@@ -123,7 +123,7 @@ class DetailActivity : AppCompatActivity() {
                 Glide.with(this@DetailActivity).load(item.iconUrl?.first()).into(ivDetailImage)
 
                 ivBack.setOnClickListener {
-                    MainActivity.newIntent(this@DetailActivity)
+                    onBackPressed()
                 }
 
                 ivDescriptionDown.setOnClickListener {

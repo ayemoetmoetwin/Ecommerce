@@ -7,7 +7,7 @@ import com.ammw.ecommercemobileapp.databinding.ItemBrandBinding
 import com.ammw.ecommercemobileapp.domain.model.BrandModel
 import com.ammw.ecommercemobileapp.ui.viewholder.BrandViewHolder
 
-class BrandAdapter(private val onClickItem: (Int) -> Unit): RecyclerView.Adapter<BrandViewHolder>() {
+class BrandAdapter(private val onClickItem: (Int,String) -> Unit): RecyclerView.Adapter<BrandViewHolder>() {
     private var List = emptyList<BrandModel>()
     var mPosition = -1
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BrandViewHolder {

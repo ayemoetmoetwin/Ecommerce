@@ -32,10 +32,11 @@ class MainActivity : AppCompatActivity() {
         val navGraph = navController.navInflater.inflate(R.navigation.mobile_navigation)
 
         navController.graph = navGraph
-        navController.navigate(R.id.bookmarkFragment)
+
+        navController.navigate(R.id.homeFragment)
         binding.apply {
-            ivMenuHomeMount.visibility = View.INVISIBLE
-            ivMenuBookmarkMount.visibility = View.VISIBLE
+            ivMenuHomeMount.visibility = View.VISIBLE
+            ivMenuBookmarkMount.visibility = View.INVISIBLE
             ivMenuSearchMount.visibility = View.INVISIBLE
             ivMenuCartMount.visibility = View.INVISIBLE
         }

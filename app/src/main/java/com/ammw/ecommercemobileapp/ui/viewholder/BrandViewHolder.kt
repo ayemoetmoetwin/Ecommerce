@@ -9,9 +9,10 @@ import com.ammw.ecommercemobileapp.databinding.ItemBrandBinding
 import com.ammw.ecommercemobileapp.domain.model.BrandModel
 import com.ammw.ecommercemobileapp.ui.adapter.BrandAdapter
 import com.bumptech.glide.Glide
+import okhttp3.internal.notifyAll
 import okhttp3.internal.wait
 
-class BrandViewHolder(private val binding: ItemBrandBinding,private val mAdapter: BrandAdapter,private val onClickItem: (Int) -> Unit) : RecyclerView.ViewHolder(binding.root) {
+class BrandViewHolder(private val binding: ItemBrandBinding,private val mAdapter: BrandAdapter,private val onClickItem: (Int, String) -> Unit) : RecyclerView.ViewHolder(binding.root) {
 
     fun bind(model: BrandModel) {
         Glide.with(itemView.context)
@@ -29,10 +30,10 @@ class BrandViewHolder(private val binding: ItemBrandBinding,private val mAdapter
         }
 
         binding.root.setOnClickListener {
-            Log.d("test_data","data is ${model.id}")
             mAdapter.mPosition = model.id
             onClickItem(
-                model.id
+                model.id,
+                model.name
             )
         }
     }

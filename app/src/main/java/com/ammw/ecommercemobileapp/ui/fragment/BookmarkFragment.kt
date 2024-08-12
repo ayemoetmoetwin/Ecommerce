@@ -9,9 +9,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ammw.ecommercemobileapp.databinding.FragmentBookmarkBinding
-import com.ammw.ecommercemobileapp.domain.model.BrandModel
 import com.ammw.ecommercemobileapp.domain.model.PopularItemModel
-import com.ammw.ecommercemobileapp.domain.model.ProductModel
 import com.ammw.ecommercemobileapp.ui.activities.DetailActivity
 import com.ammw.ecommercemobileapp.ui.adapter.BrandAdapter
 import com.ammw.ecommercemobileapp.ui.adapter.PopularItemAdapter
@@ -24,6 +22,9 @@ class BookmarkFragment : Fragment() {
     private lateinit var mBrandAdapter: BrandAdapter
     private lateinit var mPopularItemAdapter: PopularItemAdapter
     private val bookmarkViewModel: BookmarkViewModel by viewModel()
+    private var mName = ""
+    private var mProductList = arrayListOf<PopularItemModel>()
+    private var mPopularList = arrayListOf<PopularItemModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -52,6 +53,7 @@ class BookmarkFragment : Fragment() {
                 is BookmarkUiState.SuccessProduct -> {
                     binding?.loading?.visibility = View.GONE
                     mPopularItemAdapter.updateList(it.productData)
+                    mProductList = it.productData as ArrayList<PopularItemModel>
                 }
 
                 is BookmarkUiState.SuccessCategory -> {
@@ -73,8 +75,18 @@ class BookmarkFragment : Fragment() {
 
     private fun setUpAdapter() {
         mBrandAdapter = BrandAdapter(
-            onClickItem = {
-                mBrandAdapter.mPosition = it
+            onClickItem = {id,name->
+                mBrandAdapter.mPosition = id
+                mName = name
+                mProductList.map {
+                    if (it.categoryName == mName) {
+                        mPopularList.add(it)
+                    } else {
+                        mPopularList = arrayListOf()
+                    }
+                }
+                mPopularItemAdapter.updateList(mPopularList)
+                mPopularItemAdapter.notifyDataSetChanged()
                 mBrandAdapter.notifyDataSetChanged()
             }
         )
