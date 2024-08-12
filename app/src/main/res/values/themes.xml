@@ -1,0 +1,49 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.EcommenceMobileApp" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Customize your light theme here. -->
+         <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.EcommenceMobileApp" parent="Base.Theme.EcommenceMobileApp" />
+    
+    <style name="Custom_Title_Bold">
+        <item name="android:textSize">@dimen/text_big_1x</item>
+        <item name="fontFamily">@font/poppins_semi_bold</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="Custom_Regular">
+        <item name="android:textSize">@dimen/text_regular</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/colorTextSecondary</item>
+    </style>
+
+    <style name="Custom_Regular_Semi_Bold">
+        <item name="android:textSize">@dimen/text_regular</item>
+        <item name="fontFamily">@font/poppins_semi_bold</item>
+        <item name="android:textColor">@color/colorTextSecondary</item>
+    </style>
+
+    <style name="Custom_Small">
+        <item name="android:textSize">@dimen/text_small</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/colorTextSecondary1</item>
+    </style>
+
+    <style name="Custom_Small_Semi_Bold">
+        <item name="android:textSize">@dimen/text_small</item>
+        <item name="fontFamily">@font/poppins_semi_bold</item>
+        <item name="android:textColor">@color/colorTextSecondary</item>
+    </style>
+
+    <style name="Custom_Small_Bold">
+        <item name="android:textSize">@dimen/text_small</item>
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:textColor">@color/colorTextSecondary</item>
+    </style>
+</resources>

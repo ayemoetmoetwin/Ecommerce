@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/bookmarkFragment">
+
+    <fragment
+        android:id="@+id/bookmarkFragment"
+        android:name="com.ammw.ecommercemobileapp.ui.fragment.BookmarkFragment"
+        android:label="BookmarkFragment"
+        tools:layout="@layout/fragment_bookmark"/>
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.ammw.ecommercemobileapp.ui.fragment.CartFragment"
+        android:label="CartFragment"
+        tools:layout="@layout/fragment_cart"/>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.ammw.ecommercemobileapp.ui.fragment.SearchFragment"
+        android:label="SearchFragment"
+        tools:layout="@layout/fragment_search"/>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.ammw.ecommercemobileapp.ui.fragment.HomeFragment"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" />
+
+</navigation>

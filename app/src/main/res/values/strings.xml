@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">EcommenceMobileApp</string>
+    <string name="lbl_live_your_perfacet">Live Your \nPerfacet</string>
+    <string name="Start">Start</string>
+    <string name="lbl_type"><![CDATA[Smart, gorgeous & fashionable \ncollection make you cool]]></string>
+    <string name="lbl_search">Search</string>
+    <string name="lbl_popular">Popular</string>
+    <string name="lbl_size">Size</string>
+    <string name="eu">EU</string>
+    <string name="uk">UK</string>
+    <string name="us">US</string>
+    <string name="lbl_description">Description</string>
+    <string name="lbl_free_delivery_and_returns">Free Delivery and Returns</string>
+    <string name="quality">Quality</string>
+</resources>
